@@ -47,7 +47,7 @@ CPUのみで実行するには最低でもメモリが16GB以上必要らしい�
 # 設定: GPU無し, インストール済みのPytorch使用, xformers無し, accelerateは必要か？
 (venv) ~/WebSD $ nano webui-user.sh
 ~~~
-[webui-user.sh]()
+[webui-user.sh](src/webui-user.sh)
 ~~~sh
 # install and run
 (venv) ~/WebSD $ bash webui.sh --listen
@@ -71,24 +71,9 @@ How many CPU(s) should be used for distributed training? [1]:4
 --------------------------------
 Do you wish to use FP16 or BF16 (mixed precision)?
 no
-accelerate configuration saved at /home/ts/.cache/huggingface/accelerate/default_config.yaml
+accelerate configuration saved at /home/xxx/.cache/huggingface/accelerate/default_config.yaml
 ~~~
-~~~yaml
-compute_environment: LOCAL_MACHINE
-distributed_type: MULTI_CPU
-downcast_bf16: 'no'
-machine_rank: 0
-main_training_function: main
-mixed_precision: 'no'
-num_machines: 1
-num_processes: 4
-rdzv_backend: static
-same_network: true
-tpu_env: []
-tpu_use_cluster: false
-tpu_use_sudo: false
-use_cpu: true
-~~~
+[default_config.yaml](src/default_config.yaml)
 ~~~sh
 # 設定の参照
 (venv) ~/WebSD $ accelerate env
