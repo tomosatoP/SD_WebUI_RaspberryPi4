@@ -41,9 +41,9 @@ CPUのみで実行するには最低でもメモリが16GB以上必要らしい�
 ~/WebSD $ python3 -m venv venv --upgrade-deps
 ~/WebSD $ . venv/bin/activate
 # Pytorch のインストール（最新版になってる！）
-~/WebSD $ pip install -U torch torchvision torchaudio
+(venv) ~/WebSD $ pip install -U torch torchvision torchaudio
 # その他のモジュールをアップデート
-~/WebSD $ pip install -U psutil
+(venv) ~/WebSD $ pip install -U psutil
 # 設定: GPU無し, インストール済みのPytorch使用, xformers無し, accelerateは必要か？
 (venv) ~/WebSD $ nano webui-user.sh
 ~~~
