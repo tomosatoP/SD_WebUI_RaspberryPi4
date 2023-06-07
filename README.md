@@ -6,6 +6,10 @@ Raspberry Pi 4 で AUTOMATIC1111 を動かす
 - microSD Card 64GB x 3
 ### ソフトウェア
 - Raspberry Pi OS 64bit Lite
+### スクリーンショット
+![htop](image/htom.png)
+![ssh](image/ssh.png)
+![webui](image/webui.png)
 
 ## AUTOMATIC1111/stable-diffusion-webui
 https://github.com/AUTOMATIC1111/stable-diffusion-webui<br>
@@ -22,7 +26,7 @@ CPUのみで実行するには最低でもメモリが16GB以上必要らしい�
 - CONF_SWAPSIZE=100
 + CONF_SWAPSIZE=8192
 - #CONF_MAXSWAP=2048
-+ CONF_MAXSWAP=8198
++ CONF_MAXSWAP=8192
 ~~~
 ~~~sh
 ~ $ sudo systemctl restart dphys-swapfile
@@ -41,23 +45,12 @@ CPUのみで実行するには最低でもメモリが16GB以上必要らしい�
 # その他のモジュールをアップデート
 ~/WebSD $ pip install -U psutil
 # 設定: GPU無し, インストール済みのPytorch使用, xformers無し, accelerateは必要か？
-(venv) ~/WebSD $ nano webui-user.sh --listen
+(venv) ~/WebSD $ nano webui-user.sh
 ~~~
-~~~diff
-- #clone_dir="stable-diffusion-webui"
-+ clone_dir="WebSD"
-- #export COMMANDLINE_ARGS = ""
-+ export COMMANDLINE_ARGS = "--opt-sdp-attention --skip-torch-cuda-test --use-cpu all --no-half"
-- #export TORCH_COMMAND="pip install torch==1.12.1+cu113 --extra-index-url https://download.pytorch.org/whl/cu113"
-+ export TROCH_COMMAND = "pip install torch tourchvision torchaudio" 
-- #export ACCELERATE="True"
-+ export ACCELERATE="True"
-- #export NO_TCMALLOC="True"
-+ export NO_TCMALLOC="True"
-~~~
+[webui-user.sh]()
 ~~~sh
 # install and run
-(venv) ~/WebSD $ bash webui.sh
+(venv) ~/WebSD $ bash webui.sh --listen
 ~~~
 
 ### accelerate を有効化(export ACCELERATE="True")したい場合
