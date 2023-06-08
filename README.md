@@ -1,9 +1,9 @@
-# AUTOMATIC1111_on_RaspberryPi4
+# AUTOMATIC1111 with RaspberryPi4
 Raspberry Pi 4 で AUTOMATIC1111 を動かす
 
 ### ハードウェア
-- Raspberry Pi 4B 8GB x 3
-- microSD Card 64GB x 3
+- Raspberry Pi 4B 8GB
+- microSD Card 64GB
 ### ソフトウェア
 - Raspberry Pi OS 64bit Lite
 ### スクリーンショット
