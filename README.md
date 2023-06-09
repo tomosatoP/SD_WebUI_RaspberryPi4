@@ -34,7 +34,7 @@ CPUのみで実行するには最低でもメモリが16GB以上必要らしい�
 # モニタリング
 ~ $ htop
 ~~~
-### install on Linux without CUDA
+### install on Linux without GPU
 ~~~sh
 ~ $ sudo apt install wget git python3 python3-venv python3-pip libgl1-mesa-dev
 ~ $ sudo -H python3 -m pip install -U pip
