@@ -45,39 +45,11 @@ CPUのみで実行するには最低でもメモリが16GB以上必要らしい�
 (venv) ~/WebSD $ pip install -U torch torchvision torchaudio
 # その他のモジュールをアップデート
 (venv) ~/WebSD $ pip install -U psutil
-# 設定: GPU無し, インストール済みのPytorch使用, xformers無し, accelerateは必要か？
+# 設定: GPU無し, インストール済みのPytorch使用, xformers無し, accelerate無し
 (venv) ~/WebSD $ nano webui-user.sh
 ~~~
 [webui-user.sh](src/webui-user.sh)
 ~~~sh
 # install and run
 (venv) ~/WebSD $ bash webui.sh --listen
-~~~
-
-### accelerate を有効化(export ACCELERATE="True")したい場合
-注意：設定内容が正しいのか検証してません。
-~~~sh
-(venv) ~/WebSD $ accelerate config
-~~~
-~~~txt
---------------------------------
-In which compute environment are you running?
-This machine
---------------------------------
-Which type of machine are you using?
-multi-CPU
-How many different machines will you use (use more than 1 for multi-node training)? [1]: 1
-Do you wish to optimize your script with torch dynamo?[yes/NO]:NO
-How many CPU(s) should be used for distributed training? [1]:4
---------------------------------
-Do you wish to use FP16 or BF16 (mixed precision)?
-no
-accelerate configuration saved at /home/xxx/.cache/huggingface/accelerate/default_config.yaml
-~~~
-[default_config.yaml](src/default_config.yaml)
-~~~sh
-# 設定の参照
-(venv) ~/WebSD $ accelerate env
-# 動作確認
-(venv) ~/WebSD $ accelerate test
 ~~~
