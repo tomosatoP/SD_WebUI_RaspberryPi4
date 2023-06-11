@@ -8,9 +8,11 @@ Raspberry Pi 4 で AUTOMATIC1111 を動かす
 - Raspberry Pi OS 64bit Lite
 ### スクリーンショット
 ![htop](image/htom.png)<br>
+CPUの4コアがフル活躍<br>
 ![ssh](image/ssh.png)<br>
+ちゃんと動いてる<br>
 ![webui](image/webui.png)<br>
-> 1時間20分もかかった。
+50分もかかった。
 
 ## AUTOMATIC1111/stable-diffusion-webui
 https://github.com/AUTOMATIC1111/stable-diffusion-webui<br>
