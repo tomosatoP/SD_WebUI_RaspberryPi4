@@ -53,6 +53,6 @@ user@host:~/WebSD $ . venv/bin/activate
 [webui-user.sh](src/webui-user.sh)
 ~~~sh
 # install and run
-(venv) user@host:~/WebSD $ bash webui.sh
+user@host:~/WebSD $ bash webui.sh
 ~~~
 > http://host:7860
