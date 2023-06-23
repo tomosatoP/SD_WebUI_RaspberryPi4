@@ -10,7 +10,7 @@ install_dir="/home/$(whoami)"
 clone_dir="WebSD"
 
 # Commandline arguments for webui.py, for example: export COMMANDLINE_ARGS="--medvram --opt-split-attention"
-export COMMANDLINE_ARGS="--skip-torch-cuda-test --use-cpu all --no-half"
+export COMMANDLINE_ARGS="--skip-torch-cuda-test --enable-insecure-extension-access --use-cpu all --no-half --allow-code --api --listen --port 7860"
 
 # python3 executable
 python_cmd="python3"
