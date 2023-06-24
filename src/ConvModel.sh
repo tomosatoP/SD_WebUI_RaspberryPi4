@@ -21,17 +21,17 @@ fi
 
 echo 'Combine safetensors files into one.'
 python3 convert_diffusers_to_original_stable_diffusion.py \
-  --model_path model_fp16/$1 \
-  --checkpoint_path $2/$1/model_fp16.safetensors \
+  --model_path model_main/$1 \
+  --checkpoint_path $2/$1/model_main.safetensors \
   --use_safetensors \
   --half
 
 if [ $? -eq 0 ]; then
   echo 'Completed.'
-  echo `ls -lh $2/$1/model_fp16.safetensors`
+  echo `ls -lh $2/$1/model_main.safetensors`
   echo 'Delete folders that are no longer needed.'
   rm -rf model/$1
-  rm -rf model_fp16/$1
+  rm -rf model_main/$1
 else
   echo 'Error: Could not combine files into one.'
   exit 4
