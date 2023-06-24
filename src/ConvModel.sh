@@ -24,7 +24,8 @@ python3 convert_diffusers_to_original_stable_diffusion.py \
   --model_path model_main/$1 \
   --checkpoint_path $2/$1/model_main.safetensors \
   --use_safetensors \
-  --half
+#  --half
+
 
 if [ $? -eq 0 ]; then
   echo 'Completed.'
