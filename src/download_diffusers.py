@@ -27,7 +27,7 @@ def convert(model_id: str) -> bool:
 
         print("converting pickles to safetensors ...")
 
-        pipe.save_pretrained(f"model_fp16/{model_id}", safe_serialization=True)
+        pipe.save_pretrained(f"model_main/{model_id}", safe_serialization=True)
 
     except:
         print("Error: download failed and will be interrupted.")
