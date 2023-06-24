@@ -28,7 +28,7 @@ user@host:~$ python3 -m venv ConvModel/venv --upgrade-deps
 - [hugging face](https://huggingface.co/models?pipeline_tag=text-to-image&sort=downloads) からモデルを safetensors 形式でダウンロード
 
 ## AUTOMATIC1111用にモデルデータをダウンロード＆変換
-torch.float16 に変換: 16bitの浮動小数点精度がデフォルトの扱いらしい<br>
+~~torch.float16 に変換: 16bitの浮動小数点精度がデフォルトの扱いらしい~~<br>
 ema, pruned とか判らないので、対応無し
 ~~~sh
 (venv) user@host:~/ConvModel$ sh ConvModel.sh <model_id> <output_dir>
