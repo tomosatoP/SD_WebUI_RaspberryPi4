@@ -1,5 +1,7 @@
 # AUTOMATIC1111用モデルデータを集める
-[hugging face](https://huggingface.co/models?pipeline_tag=text-to-image&sort=downloads) に、AUTOMATIC1111 へそのまま適用できるモデルデータが無い場合の対処方法。
+[hugging face](https://huggingface.co/models?pipeline_tag=text-to-image&sort=downloads) に、Stable Diffusion Checkpoint ファイルが無い場合の対処方法。
+
+Stable Diffusion Chekcpoint <- Hugging Face Diffusers Files
 
 ## 準備
 ~~~sh
