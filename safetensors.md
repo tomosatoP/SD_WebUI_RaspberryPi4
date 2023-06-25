@@ -27,7 +27,7 @@ user@host:~$ python3 -m venv ConvModel/venv --upgrade-deps
 - モデルをダウンロードして、AUTOMATIC1111 用に一つにまとめた safetensors ファイルを作成
 
 [download_diffusers.py](src/download_diffusers.py)
-- [hugging face](https://huggingface.co/models?pipeline_tag=text-to-image&sort=downloads) からモデルを safetensors 形式でダウンロード
+- [hugging face](https://huggingface.co/models?pipeline_tag=text-to-image&sort=downloads) から diffusers モデルを safetensors 形式でダウンロード
 
 ## AUTOMATIC1111用にモデルデータをダウンロード＆変換
 ~~torch.float16 に変換: 16bitの浮動小数点精度がデフォルトの扱いらしい~~<br>
