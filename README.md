@@ -32,7 +32,7 @@ CPUのみで実行するには最低でもメモリが16GB以上必要らしい�
 # モニタリング
 ~ $ htop
 ~~~
-### install on Linux without GPU
+### Install on Linux without GPU
 
 user name: user<br>
 host name: host
