@@ -4,7 +4,7 @@
 Stable Diffusion Chekcpoint(*.safetensors) <- Hugging Face Diffusers Files
 
 ## 準備
-|username|hostname|folsername|
+|username|hostname|foldername|
 |---|---|---|
 |user|host|ConvModel|
 ~~~sh
