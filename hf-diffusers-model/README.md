@@ -1,9 +1,12 @@
 # AUTOMATIC1111用モデルデータを集める
 [hugging face](https://huggingface.co/models?pipeline_tag=text-to-image&sort=downloads) に、Stable Diffusion Checkpoint ファイルが無い場合の対処方法。
 
-Stable Diffusion Chekcpoint <- Hugging Face Diffusers Files
+Stable Diffusion Chekcpoint(*.safetensors) <- Hugging Face Diffusers Files
 
 ## 準備
+|username|hostname|folsername|
+|---|---|---|
+|user|host|ConvModel|
 ~~~sh
 user@host:~$ sudo apt update
 user@host:~$ sudo apt install python3-pip
@@ -14,7 +17,7 @@ user@host:~$ python3 -m venv ConvModel/venv --upgrade-deps
 ~~~
 
 ~~~sh
-(venv) user@host:~/ConvModel$ wget https://raw.githubusercontent.com/tomosatoP/AUTOMATIC1111_on_RaspberryPi4/main/src/files.txt
+(venv) user@host:~/ConvModel$ wget https://raw.githubusercontent.com/tomosatoP/SD_WebUI_RaspberryPi4/main/hf-diffusers-model/files.txt
 (venv) user@host:~/ConvModel$ wget -i files.txt
 ~~~
 
@@ -23,10 +26,10 @@ user@host:~$ python3 -m venv ConvModel/venv --upgrade-deps
 - *Only* converts the UNet, VAE, and Text Encoder.
 - Does not convert optimizer state or any other thing.
 
-[ConvModel.sh](src/ConvModel.sh)
+[ConvModel.sh](ConvModel.sh)
 - モデルをダウンロードして、AUTOMATIC1111 用に一つにまとめた safetensors ファイルを作成
 
-[download_diffusers.py](src/download_diffusers.py)
+[download_diffusers.py](download_diffusers.py)
 - [hugging face](https://huggingface.co/models?pipeline_tag=text-to-image&sort=downloads) から diffusers モデルを safetensors 形式でダウンロード
 
 ## AUTOMATIC1111用にモデルデータをダウンロード＆変換
@@ -35,12 +38,4 @@ ema, pruned とか判らないので、対応無し
 ~~~sh
 (venv) user@host:~/ConvModel$ sh ConvModel.sh <model_id> <output_dir>
 ~~~
-
-確認済みの model_id
-- stabilityai/stable-diffusion-2-1
-- runwayml/stable-diffusion-v1-5
-- CompVis/stable-diffusion-v1-4
-- hakurei/waifu-diffusion
-- dreamlike-art/dreamlike-anime-1.0
-- eimiss/EimisAnimeDiffusion_1.0v
-- stablediffusionapi/anything-v5
+---
