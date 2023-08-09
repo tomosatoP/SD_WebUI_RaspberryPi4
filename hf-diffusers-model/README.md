@@ -36,6 +36,6 @@ user@host:~$ python3 -m venv ConvModel/venv --upgrade-deps
 ~~torch.float16 に変換: 16bitの浮動小数点精度がデフォルトの扱いらしい~~<br>
 ema, pruned とか判らないので、対応無し
 ~~~sh
-(venv) user@host:~/ConvModel$ sh ConvModel.sh <model_id> <output_dir>
+(venv) user@host:~/ConvModel$ bash ConvModel.sh
 ~~~
 ---
